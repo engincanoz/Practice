@@ -5,9 +5,10 @@ import (
 	"math"
 )
 
+var throughx, throughy, throughz int
+var parallelx, parallely, parallelz int
+
 func GetVectors() ([]int, []int) {
-	var throughx, throughy, throughz int
-	var parallelx, parallely, parallelz int
 
 	fmt.Print("Enter the point your line pases through: ")
 	_, err := fmt.Scan(&throughx, &throughy, &throughz)
@@ -67,4 +68,29 @@ func ParametricGenerator(xt, xp []int) (string, string, string) {
 		}
 	}
 	return strx, stry, strz
+}
+
+func SymetricGeneratot() {
+	for i := 0; i < 3; i++ {
+		switch i {
+		case 0:
+			if parallelx != 0 {
+				fmt.Println("(x -", throughx, ") /", parallelx)
+			} else {
+				fmt.Println("x =", throughx, ",")
+			}
+		case 1:
+			if parallely != 0 {
+				fmt.Println("(y -", throughy, ") /", parallely)
+			} else {
+				fmt.Println("y =", throughy, ",")
+			}
+		case 2:
+			if parallelz != 0 {
+				fmt.Println("(z -", throughz, ") /", parallelz)
+			} else {
+				fmt.Println("z =", throughz, ",")
+			}
+		}
+	}
 }
