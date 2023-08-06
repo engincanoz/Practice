@@ -77,19 +77,19 @@ func SymetricGeneratot() {
 			if parallelx != 0 {
 				fmt.Println("(x -", throughx, ") /", parallelx)
 			} else {
-				fmt.Println("x =", throughx, ",")
+				fmt.Println("x =", throughx)
 			}
 		case 1:
 			if parallely != 0 {
 				fmt.Println("(y -", throughy, ") /", parallely)
 			} else {
-				fmt.Println("y =", throughy, ",")
+				fmt.Println("y =", throughy)
 			}
 		case 2:
 			if parallelz != 0 {
 				fmt.Println("(z -", throughz, ") /", parallelz)
 			} else {
-				fmt.Println("z =", throughz, ",")
+				fmt.Println("z =", throughz)
 			}
 		}
 	}
